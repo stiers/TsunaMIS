@@ -21,8 +21,8 @@ How to install:
 4. Visit the new 'TsunaPress' menu in your WordPress dashboard
 
 FAQ:
-<p><b>Does TsunaPress integrate with any shopping cart plugin?</b></p>
-<p>No! TsunaPress is a stand-alone system that requires uses to manually input their sales and expenses. It does not automatically link into any shopping carts, or get any data by itself.</p>
+<p><b>Does TsunaPress integrate with any shopping cart plugin?</b>
+No! TsunaPress is a stand-alone system that requires uses to manually input their sales and expenses. It does not automatically link into any shopping carts, or get any data by itself.</p>
 
-<p><b>How do I make TsunaPress show up in the front-end of my site?</b></p>
-<p>You can't, TsunaPress can only be accessed on the WordPress administrator's dashboard.</p>
+<p><b>How do I make TsunaPress show up in the front-end of my site?</b>
+You can't, TsunaPress can only be accessed on the WordPress administrator's dashboard.</p>
