@@ -5,5 +5,7 @@
 
 <p>Tsuna Management Information System</p>
 
-<p><a href="https://drive.google.com/file/d/0B7PffCiui3r-VzRoR3NDUklkVkU/edit?usp=sharing">Documentation</a></p>
-<p><a href="https://drive.google.com/file/d/0B7PffCiui3r-Mk10RlYxWDctT28/edit?usp=sharing">Gantt Chart</a></p>
+<ul>
+	<li><a href="https://drive.google.com/file/d/0B7PffCiui3r-VzRoR3NDUklkVkU/edit?usp=sharing">Documentation</a></li>
+	<li><a href="https://drive.google.com/file/d/0B7PffCiui3r-Mk10RlYxWDctT28/edit?usp=sharing">Gantt Chart</a></li>
+</ul>
