@@ -8,6 +8,6 @@
 <ul>
 	<li><a href="https://drive.google.com/file/d/0B7PffCiui3r-VzRoR3NDUklkVkU/edit?usp=sharing">Documentation</a></li>
 	<li><a href="https://drive.google.com/file/d/0B7PffCiui3r-Mk10RlYxWDctT28/edit?usp=sharing">Gantt Chart</a></li>
-	<li><a href="https://github.com/stiers/TsunaMIS/blob/master/TsunApp/README.md">Desktop Application</a></li>
-	<li><a href="https://github.com/stiers/TsunaMIS/blob/master/TsunaPress/README.md">Web Application</a></li>
+	<li><a href="https://github.com/stiers/TsunaMIS/tree/master/TsunApp">Desktop Application</a></li>
+	<li><a href="https://github.com/stiers/TsunaMIS/tree/master/TsunaPress">Web Application</a></li>
 </ul>
