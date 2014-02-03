@@ -7,6 +7,17 @@ Form=..\Forms\frmProfile.frm
 Module=mdlCore; ..\Modules\mdlCore.bas
 Object={67397AA1-7FB1-11D0-B148-00A0C922E820}#6.0#0; MSADODC.OCX
 Reference=*\G{00000200-0000-0010-8000-00AA006D2EA4}#2.0#0#C:\Program Files (x86)\Common Files\System\ado\msado20.tlb#Microsoft ActiveX Data Objects 2.0 Library
+Object={5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0; MSFLXGRD.OCX
+Form=..\Forms\frmSuppliers.frm
+Class=clsUsers; ..\Modules\clsUsers.cls
+Class=clsSuppliers; ..\Modules\clsSuppliers.cls
+Form=..\Forms\frmSalesLine.frm
+Class=clsSalesLine; ..\Modules\clsSalesLine.cls
+Form=..\Forms\frmExpType.frm
+Class=clsExpType; ..\Modules\clsExpType.cls
+Form=..\Forms\frmInputSales.frm
+Form=..\Forms\frmInputExp.frm
+Object={86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0; MSCOMCT2.OCX
 IconForm="frmIndex"
 Startup="Sub Main"
 HelpFile=""
@@ -36,3 +47,6 @@ Unattended=0
 Retained=0
 ThreadPerObject=0
 MaxNumberOfThreads=1
+
+[MS Transaction Server]
+AutoRefresh=1

@@ -1,19 +1,36 @@
 VERSION 5.00
 Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
-Begin VB.Form frmUsers 
-   Caption         =   "Users"
+Begin VB.Form frmExpType 
+   Caption         =   "Expense Types"
    ClientHeight    =   8085
-   ClientLeft      =   2925
-   ClientTop       =   1275
-   ClientWidth     =   9480
+   ClientLeft      =   3705
+   ClientTop       =   1605
+   ClientWidth     =   9495
    LinkTopic       =   "Form1"
    LockControls    =   -1  'True
    ScaleHeight     =   8085
-   ScaleWidth      =   9480
-   Begin MSFlexGridLib.MSFlexGrid grdUsers 
+   ScaleWidth      =   9495
+   Begin VB.CommandButton btnAddNewExpType 
+      Caption         =   "Add New"
+      BeginProperty Font 
+         Name            =   "Segoe UI"
+         Size            =   9
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   2400
+      TabIndex        =   0
+      Top             =   240
+      Width           =   975
+   End
+   Begin MSFlexGridLib.MSFlexGrid grdExpType 
       Height          =   7335
       Left            =   120
-      TabIndex        =   2
+      TabIndex        =   1
       Top             =   720
       Width           =   9255
       _ExtentX        =   16325
@@ -29,26 +46,9 @@ Begin VB.Form frmUsers
          Strikethrough   =   0   'False
       EndProperty
    End
-   Begin VB.CommandButton btnAddNewUser 
-      Caption         =   "Add New"
-      BeginProperty Font 
-         Name            =   "Segoe UI"
-         Size            =   9
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   375
-      Left            =   1200
-      TabIndex        =   1
-      Top             =   240
-      Width           =   975
-   End
-   Begin VB.Label lblUsers 
+   Begin VB.Label lblExpType 
       AutoSize        =   -1  'True
-      Caption         =   "Users"
+      Caption         =   "Expense Types"
       BeginProperty Font 
          Name            =   "Segoe UI"
          Size            =   14.25
@@ -60,20 +60,16 @@ Begin VB.Form frmUsers
       EndProperty
       Height          =   375
       Left            =   240
-      TabIndex        =   0
+      TabIndex        =   2
       Top             =   240
-      Width           =   720
+      Width           =   1935
    End
 End
-Attribute VB_Name = "frmUsers"
+Attribute VB_Name = "frmExpType"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
-Private Sub btnAddNewUser_Click()
-    frmUserNew.Show
-End Sub
-
 Private Sub Form_Load()
-    Call Users.Display(grdUsers)
+    Call ExpenseType.Display(grdExpType)
 End Sub

@@ -2,11 +2,27 @@ Attribute VB_Name = "mdlCore"
 Public Connect As ADODB.Connection
 Public Records As ADODB.Recordset
 
+Public Users As clsUsers
+Public ExpenseType As clsExpType
+Public Suppliers As clsSuppliers
+Public SalesLine As clsSalesLine
+
 Public query As String
 
 Sub Main()
     Set Connect = New ADODB.Connection
     Set Records = New ADODB.Recordset
+    
+    Set Users = New clsUsers
+    Set ExpenseType = New clsExpType
+    Set Suppliers = New clsSuppliers
+    Set SalesLine = New clsSalesLine
+    
+    With Records
+        .CursorLocation = adUseClient
+        .CursorType = adOpenDynamic
+        .LockType = adLockOptimistic
+    End With
 
     Dim ConnectionString As String
     
