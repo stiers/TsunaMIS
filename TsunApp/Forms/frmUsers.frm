@@ -5,18 +5,17 @@ Begin VB.Form frmUsers
    ClientHeight    =   8085
    ClientLeft      =   2925
    ClientTop       =   1275
-   ClientWidth     =   9480
+   ClientWidth     =   9585
    LinkTopic       =   "Form1"
-   LockControls    =   -1  'True
    ScaleHeight     =   8085
-   ScaleWidth      =   9480
+   ScaleWidth      =   9585
    Begin MSFlexGridLib.MSFlexGrid grdUsers 
       Height          =   7335
       Left            =   120
       TabIndex        =   2
       Top             =   720
-      Width           =   9255
-      _ExtentX        =   16325
+      Width           =   9375
+      _ExtentX        =   16536
       _ExtentY        =   12938
       _Version        =   393216
       BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
@@ -50,10 +49,10 @@ Begin VB.Form frmUsers
       AutoSize        =   -1  'True
       Caption         =   "Users"
       BeginProperty Font 
-         Name            =   "Segoe UI"
+         Name            =   "Segoe UI Semibold"
          Size            =   14.25
          Charset         =   0
-         Weight          =   700
+         Weight          =   600
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -62,7 +61,7 @@ Begin VB.Form frmUsers
       Left            =   240
       TabIndex        =   0
       Top             =   240
-      Width           =   720
+      Width           =   690
    End
 End
 Attribute VB_Name = "frmUsers"
@@ -76,4 +75,12 @@ End Sub
 
 Private Sub Form_Load()
     Call Users.Display(grdUsers)
+End Sub
+
+Private Sub grdUsers_Click()
+    grdUsers.ToolTipText = "Double-click to view payroll"
+End Sub
+
+Private Sub grdUsers_DblClick()
+    frmUserPayroll.Show
 End Sub

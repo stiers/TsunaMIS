@@ -6,33 +6,30 @@ BEGIN
   DataSourceBehavior  = 0  'vbNone
   MTSTransactionMode  = 0  'NotAnMTSObject
 END
-Attribute VB_Name = "clsUsers"
+Attribute VB_Name = "clsLedger"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
 Public Function Display(Grid As MSFlexGrid)
     If Records.State = 1 Then Records.Close
-
-    query = "SELECT user_login, display_name, user_email, meta_value " & _
-            "FROM tbl_users " & _
-            "RIGHT JOIN tbl_usermeta ON ID = user_id " & _
-            "WHERE meta_key = 'tbl_user_level'"
-
+    
+    query = "SELECT  ledger_date, post_title, amount " & _
+            "FROM tbl_wpaccounting_ledger " & _
+            "RIGHT JOIN tbl_posts ON type_id = ID " & _
+            "WHERE ledger_date IS NOT NULL"
+            
     Records.Open query, Connect
-
+    
     With Grid
         .Rows = Records.RecordCount + 1
         .Cols = Records.Fields.Count + 1
-
-        .TextMatrix(0, 1) = "Username"
-        .TextMatrix(0, 2) = "Name"
-        .TextMatrix(0, 3) = "E-mail"
-        .TextMatrix(0, 4) = "Role"
-
+        
+        .TextMatrix(0, 1) = "Date"
+        .TextMatrix(0, 2) = "Type"
+        .TextMatrix(0, 3) = "Amount"
+        
         For RowData = 1 To Records.RecordCount
-            .TextMatrix(RowData, 0) = RowData
-            
             For ColData = 0 To Records.Fields.Count - 1
                 .TextMatrix(RowData, ColData + 1) = Records.Fields(ColData)
             Next ColData
@@ -46,6 +43,5 @@ Public Function Display(Grid As MSFlexGrid)
         .ColWidth(1) = X
         .ColWidth(2) = X
         .ColWidth(3) = X
-        .ColWidth(4) = 1900
     End With
 End Function

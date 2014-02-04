@@ -267,10 +267,10 @@ Begin VB.Form frmInputSales
       AutoSize        =   -1  'True
       Caption         =   "Input Sales"
       BeginProperty Font 
-         Name            =   "Segoe UI"
+         Name            =   "Segoe UI Semibold"
          Size            =   14.25
          Charset         =   0
-         Weight          =   700
+         Weight          =   600
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -279,7 +279,7 @@ Begin VB.Form frmInputSales
       Left            =   240
       TabIndex        =   1
       Top             =   240
-      Width           =   1470
+      Width           =   1410
    End
 End
 Attribute VB_Name = "frmInputSales"

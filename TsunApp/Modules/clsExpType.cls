@@ -11,36 +11,24 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
-Public Function Display(Grid As MSFlexGrid)
+Public Function Display(List As ListBox)
     If Records.State = 1 Then Records.Close
     
     query = "SELECT post_title FROM tbl_posts WHERE post_type = 'wpa_expense_type'"
     
     Records.Open query, Connect
     
-    With Grid
-        .Rows = Records.RecordCount + 1
-        .Cols = Records.Fields.Count + 1
-        
-        .TextMatrix(0, 1) = "Title"
-        
-        For RowData = 1 To Records.RecordCount
-            .TextMatrix(RowData, 0) = RowData
-            
-            For ColData = 0 To Records.Fields.Count - 1
-                .TextMatrix(RowData, ColData + 1) = Records.Fields(ColData)
-            Next ColData
-            
-            Records.MoveNext
-            
-        Next RowData
-        
-        x = .Width / 4
-        
-        .ColWidth(0) = 350
-        .ColWidth(1) = x
-        
-    End With
+    List.Clear
+    
+    If Records.RecordCount > 0 Then
+        Records.MoveFirst
+        Do Until Records.EOF Or Records.BOF
+            With List
+                .AddItem Records!post_title
+            End With
+        Records.MoveNext
+        Loop
+    End If
 End Function
 
 Public Function Dropdown(Combo As ComboBox)
@@ -50,14 +38,21 @@ Public Function Dropdown(Combo As ComboBox)
     
     Records.Open query, Connect
     
-    Combo.Clear
-    
-    For ctr = 0 To Records.RecordCount
-    
-        If Not Records.EOF Then
-            Combo.AddItem Records!post_title
-            Records.MoveNext
-        End If
+    If Records.RecordCount > 0 Then
+        Records.MoveFirst
         
-    Next ctr
+        If Not Records.EOF Then
+            For ComboData = 0 To Records.RecordCount - 1
+                Combo.AddItem Records!post_title
+                Records.MoveNext
+            Next ComboData
+        End If
+    End If
+End Function
+
+Public Function AddNew(Post As String)
+    query = "INSERT INTO tbl_posts(ID, post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, guid, menu_order, post_type, post_mime_type, comment_count) " & _
+            "VALUES ('', '1', '', '', '', '" & Post & "', '', 'published', 'closed', 'closed', '', '" & LCase(Post) & "', '', '', '', '', '', '0', 'http://localhost/tsuna/?post_type=wpa_expense_type', '', 'wpa_expense_type', '', '')"
+            
+    Connect.Execute query
 End Function

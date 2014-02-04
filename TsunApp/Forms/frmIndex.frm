@@ -1,13 +1,27 @@
 VERSION 5.00
 Begin VB.Form frmIndex 
+   BackColor       =   &H80000005&
    Caption         =   "Index"
-   ClientHeight    =   8085
-   ClientLeft      =   4785
-   ClientTop       =   2310
-   ClientWidth     =   7215
+   ClientHeight    =   8685
+   ClientLeft      =   3015
+   ClientTop       =   1275
+   ClientWidth     =   9855
    LinkTopic       =   "Form1"
-   ScaleHeight     =   8085
-   ScaleWidth      =   7215
+   ScaleHeight     =   10770
+   ScaleWidth      =   19200
+   WindowState     =   2  'Maximized
+   Begin VB.PictureBox imgLogo 
+      BorderStyle     =   0  'None
+      Height          =   9615
+      Left            =   9480
+      Picture         =   "frmIndex.frx":0000
+      ScaleHeight     =   641
+      ScaleMode       =   3  'Pixel
+      ScaleWidth      =   641
+      TabIndex        =   0
+      Top             =   960
+      Width           =   9615
+   End
    Begin VB.Menu mnuAccounting 
       Caption         =   "Accounting"
       Begin VB.Menu mnuAccEntries 
@@ -35,6 +49,9 @@ Begin VB.Form frmIndex
          Caption         =   "Sales Lines"
       End
    End
+   Begin VB.Menu mnuLogistics 
+      Caption         =   "Logistics"
+   End
    Begin VB.Menu mnuUsers 
       Caption         =   "Users"
       Begin VB.Menu mnuUserAll 
@@ -58,11 +75,19 @@ Private Sub mnuExpType_Click()
 End Sub
 
 Private Sub mnuInputExp_Click()
-    frmInputExp.Show
+    frmInputExp.Show vbModal, Me
 End Sub
 
 Private Sub mnuInputSales_Click()
-    frmInputSales.Show
+    frmInputSales.Show vbModal, Me
+End Sub
+
+Private Sub mnuLedger_Click()
+    frmLedger.Show vbModal, Me
+End Sub
+
+Private Sub mnuPersonnel_Click()
+
 End Sub
 
 Private Sub mnuSales_Click()

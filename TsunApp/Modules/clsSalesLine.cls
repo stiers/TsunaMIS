@@ -11,52 +11,53 @@ Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = True
 Attribute VB_PredeclaredId = False
 Attribute VB_Exposed = False
-Public Function Display(Grid As MSFlexGrid)
+Public Function Display(List As ListBox)
+
     If Records.State = 1 Then Records.Close
     
     query = "SELECT post_title FROM tbl_posts WHERE post_type = 'wpa_sales_meta'"
     
     Records.Open query, Connect
     
-    With Grid
-        .Rows = Records.RecordCount + 1
-        .Cols = Records.Fields.Count + 1
+    List.Clear
+    
+    If Records.RecordCount > 0 Then
+    
+        Records.MoveFirst
         
-        .TextMatrix(0, 1) = "Title"
+        Do Until Records.EOF Or Records.BOF
         
-        For RowData = 1 To Records.RecordCount
-            .TextMatrix(RowData, 0) = RowData
+            With List
             
-            For ColData = 0 To Records.Fields.Count - 1
-                .TextMatrix(RowData, ColData + 1) = Records.Fields(ColData)
-            Next ColData
+                .AddItem Records!post_title
             
-            Records.MoveNext
-        Next RowData
+            End With
+            
+        Records.MoveNext
         
-        x = .Width / 4
-        
-        .ColWidth(0) = 350
-        .ColWidth(1) = x
-        
-    End With
+        Loop
+    
+    End If
+    
 End Function
 
 Public Function Dropdown(Combo As ComboBox)
+
     If Records.State = 1 Then Records.Close
     
     query = "SELECT post_title FROM tbl_posts WHERE post_type = 'wpa_sales_meta'"
     
     Records.Open query, Connect
     
-    Combo.Clear
-    
-    For ctr = 0 To Records.RecordCount
-    
-        If Not Records.EOF Then
-            Combo.AddItem Records!post_title
-            Records.MoveNext
-        End If
+    If Records.RecordCount > 0 Then
+        Records.MoveFirst
         
-    Next ctr
+        If Not Records.EOF Then
+            For ComboData = 0 To Records.RecordCount - 1
+                Combo.AddItem Records!post_title
+                Records.MoveNext
+            Next ComboData
+        End If
+    End If
+    
 End Function

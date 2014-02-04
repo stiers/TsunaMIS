@@ -6,6 +6,8 @@ Public Users As clsUsers
 Public ExpenseType As clsExpType
 Public Suppliers As clsSuppliers
 Public SalesLine As clsSalesLine
+Public Ledger As clsLedger
+Public MD5 As clsMD5
 
 Public query As String
 
@@ -17,6 +19,8 @@ Sub Main()
     Set ExpenseType = New clsExpType
     Set Suppliers = New clsSuppliers
     Set SalesLine = New clsSalesLine
+    Set Ledger = New clsLedger
+    Set MD5 = New clsMD5
     
     With Records
         .CursorLocation = adUseClient

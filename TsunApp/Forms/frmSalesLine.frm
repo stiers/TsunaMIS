@@ -1,14 +1,66 @@
 VERSION 5.00
-Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
 Begin VB.Form frmSalesLine 
    Caption         =   "Sales Line"
    ClientHeight    =   8085
-   ClientLeft      =   4530
-   ClientTop       =   1935
+   ClientLeft      =   3660
+   ClientTop       =   2025
    ClientWidth     =   9510
    LinkTopic       =   "Form1"
    ScaleHeight     =   8085
    ScaleWidth      =   9510
+   Begin VB.CommandButton btnApplyAction 
+      Caption         =   "Apply"
+      BeginProperty Font 
+         Name            =   "Segoe UI"
+         Size            =   9
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      Left            =   2160
+      TabIndex        =   4
+      Top             =   960
+      Width           =   975
+   End
+   Begin VB.ComboBox cboBulkAction 
+      BeginProperty Font 
+         Name            =   "Segoe UI"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   375
+      ItemData        =   "frmSalesLine.frx":0000
+      Left            =   240
+      List            =   "frmSalesLine.frx":000D
+      TabIndex        =   3
+      Text            =   "Bulk Action"
+      Top             =   960
+      Width           =   1815
+   End
+   Begin VB.ListBox lstSalesLine 
+      BeginProperty Font 
+         Name            =   "Segoe UI"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   6330
+      Left            =   240
+      Style           =   1  'Checkbox
+      TabIndex        =   2
+      Top             =   1560
+      Width           =   4575
+   End
    Begin VB.CommandButton btnAddNewSalesLine 
       Caption         =   "Add New"
       BeginProperty Font 
@@ -26,42 +78,23 @@ Begin VB.Form frmSalesLine
       Top             =   240
       Width           =   975
    End
-   Begin MSFlexGridLib.MSFlexGrid grdSalesLine 
-      Height          =   7335
-      Left            =   120
-      TabIndex        =   1
-      Top             =   720
-      Width           =   9255
-      _ExtentX        =   16325
-      _ExtentY        =   12938
-      _Version        =   393216
-      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
-         Name            =   "Segoe UI"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-   End
    Begin VB.Label lblSalesLine 
       AutoSize        =   -1  'True
       Caption         =   "Sales Line"
       BeginProperty Font 
-         Name            =   "Segoe UI"
+         Name            =   "Segoe UI Semibold"
          Size            =   14.25
          Charset         =   0
-         Weight          =   700
+         Weight          =   600
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
       Left            =   240
-      TabIndex        =   2
+      TabIndex        =   1
       Top             =   240
-      Width           =   1290
+      Width           =   1245
    End
 End
 Attribute VB_Name = "frmSalesLine"
@@ -70,5 +103,5 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Form_Load()
-    Call SalesLine.Display(grdSalesLine)
+    Call SalesLine.Display(lstSalesLine)
 End Sub

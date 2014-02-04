@@ -3,8 +3,8 @@ Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Begin VB.Form frmInputExp 
    Caption         =   "Input Expenses"
    ClientHeight    =   7950
-   ClientLeft      =   735
-   ClientTop       =   1875
+   ClientLeft      =   2460
+   ClientTop       =   2040
    ClientWidth     =   15765
    LinkTopic       =   "Form1"
    ScaleHeight     =   7950
@@ -467,7 +467,7 @@ Begin VB.Form frmInputExp
       _ExtentX        =   4895
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   51380225
+      Format          =   7995393
       CurrentDate     =   41673
    End
    Begin VB.TextBox txtExpNote1 
@@ -530,7 +530,7 @@ Begin VB.Form frmInputExp
       _ExtentX        =   4895
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   51380225
+      Format          =   7995393
       CurrentDate     =   41673
    End
    Begin MSComCtl2.DTPicker dteExpDate3 
@@ -542,7 +542,7 @@ Begin VB.Form frmInputExp
       _ExtentX        =   4895
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   51380225
+      Format          =   7995393
       CurrentDate     =   41673
    End
    Begin MSComCtl2.DTPicker dteExpDate4 
@@ -554,7 +554,7 @@ Begin VB.Form frmInputExp
       _ExtentX        =   4895
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   51380225
+      Format          =   7995393
       CurrentDate     =   41673
    End
    Begin MSComCtl2.DTPicker dteExpDate5 
@@ -566,7 +566,7 @@ Begin VB.Form frmInputExp
       _ExtentX        =   4895
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   51380225
+      Format          =   7995393
       CurrentDate     =   41673
    End
    Begin MSComCtl2.DTPicker dteExpDate6 
@@ -578,7 +578,7 @@ Begin VB.Form frmInputExp
       _ExtentX        =   4895
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   51380225
+      Format          =   7995393
       CurrentDate     =   41673
    End
    Begin MSComCtl2.DTPicker dteExpDate7 
@@ -590,7 +590,7 @@ Begin VB.Form frmInputExp
       _ExtentX        =   4895
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   51380225
+      Format          =   7995393
       CurrentDate     =   41673
    End
    Begin VB.Label lblExpNotes 
@@ -687,10 +687,10 @@ Begin VB.Form frmInputExp
       AutoSize        =   -1  'True
       Caption         =   "Input Expenses"
       BeginProperty Font 
-         Name            =   "Segoe UI"
+         Name            =   "Segoe UI Semibold"
          Size            =   14.25
          Charset         =   0
-         Weight          =   700
+         Weight          =   600
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -699,7 +699,7 @@ Begin VB.Form frmInputExp
       Left            =   240
       TabIndex        =   3
       Top             =   240
-      Width           =   2025
+      Width           =   1935
    End
 End
 Attribute VB_Name = "frmInputExp"
@@ -715,7 +715,7 @@ Private Sub Form_Load()
     Call ExpenseType.Dropdown(cboInputExp5)
     Call ExpenseType.Dropdown(cboInputExp6)
     Call ExpenseType.Dropdown(cboInputExp7)
-    
+
     Call Suppliers.Dropdown(cboSupplier1)
     Call Suppliers.Dropdown(cboSupplier2)
     Call Suppliers.Dropdown(cboSupplier3)
