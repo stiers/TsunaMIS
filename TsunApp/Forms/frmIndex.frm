@@ -3,8 +3,8 @@ Begin VB.Form frmIndex
    BackColor       =   &H80000005&
    Caption         =   "Index"
    ClientHeight    =   8685
-   ClientLeft      =   3225
-   ClientTop       =   1710
+   ClientLeft      =   2580
+   ClientTop       =   1335
    ClientWidth     =   9855
    LinkTopic       =   "Form1"
    ScaleHeight     =   8685
@@ -21,6 +21,26 @@ Begin VB.Form frmIndex
       TabIndex        =   0
       Top             =   960
       Width           =   9615
+   End
+   Begin VB.Label lblLogo 
+      AutoSize        =   -1  'True
+      BackColor       =   &H80000005&
+      Caption         =   "TsunaMIS"
+      BeginProperty Font 
+         Name            =   "Segoe UI Light"
+         Size            =   72
+         Charset         =   0
+         Weight          =   300
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      ForeColor       =   &H8000000D&
+      Height          =   1920
+      Left            =   1080
+      TabIndex        =   1
+      Top             =   4680
+      Width           =   5775
    End
    Begin VB.Menu mnuAccounting 
       Caption         =   "Accounting"

@@ -9,6 +9,11 @@ Public SalesLine As clsSalesLine
 Public Ledger As clsLedger
 Public Quote As clsQuotation
 
+Public ExcelApp As Excel.Application
+Public ExcelWB As Excel.Workbook
+Public ExcelWS As Excel.Worksheet
+Public ExcelName As String
+
 Public MD5 As clsMD5
 
 Public query As String
@@ -23,6 +28,10 @@ Sub Main()
     Set SalesLine = New clsSalesLine
     Set Ledger = New clsLedger
     Set Quote = New clsQuotation
+    
+    Set ExcelApp = New Excel.Application
+    Set ExcelWB = ExcelApp.Workbooks.Add
+    Set ExcelWS = ExcelWB.Worksheets.Add
     
     Set MD5 = New clsMD5
     

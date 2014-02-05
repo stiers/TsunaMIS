@@ -2,8 +2,8 @@ VERSION 5.00
 Begin VB.Form frmExpType 
    Caption         =   "Expense Types"
    ClientHeight    =   8085
-   ClientLeft      =   4515
-   ClientTop       =   1050
+   ClientLeft      =   4470
+   ClientTop       =   1440
    ClientWidth     =   9690
    BeginProperty Font 
       Name            =   "Segoe UI"
@@ -89,6 +89,7 @@ Begin VB.Form frmExpType
       EndProperty
       Height          =   375
       Left            =   2400
+      Style           =   1  'Graphical
       TabIndex        =   0
       Top             =   240
       Width           =   1335

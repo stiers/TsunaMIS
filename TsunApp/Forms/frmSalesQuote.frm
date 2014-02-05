@@ -51,7 +51,7 @@ Begin VB.Form frmSalesQuote
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Format          =   41943041
+      Format          =   50266113
       CurrentDate     =   41675
    End
    Begin VB.ComboBox cboSalesSupplier 
@@ -558,15 +558,6 @@ Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub btnAddQuote_Click()
-    Dim ExcelApp As Excel.Application
-    Dim ExcelWB As Excel.Workbook
-    Dim ExcelWS As Excel.Worksheet
-    Dim ExcelName As String
-    
-    Set ExcelApp = New Excel.Application
-    Set ExcelWB = ExcelApp.Workbooks.Add
-    Set ExcelWS = ExcelWB.Worksheets.Add
-
     ExcelName = Me.txtSalesNum.Text & ".xlsx"
     
     query = "INSERT INTO tbl_quotations(q_id, q_num, q_type) " & _

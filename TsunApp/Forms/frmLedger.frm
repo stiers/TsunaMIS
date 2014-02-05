@@ -4,8 +4,8 @@ Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Begin VB.Form frmLedger 
    Caption         =   "General Ledger"
    ClientHeight    =   8085
-   ClientLeft      =   1170
-   ClientTop       =   900
+   ClientLeft      =   3870
+   ClientTop       =   3495
    ClientWidth     =   12150
    LinkTopic       =   "Form1"
    ScaleHeight     =   8085
@@ -47,7 +47,7 @@ Begin VB.Form frmLedger
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Format          =   7995393
+      Format          =   50266113
       CurrentDate     =   41674
    End
    Begin VB.ComboBox cboBulkAction 

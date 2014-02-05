@@ -2,8 +2,8 @@ VERSION 5.00
 Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
 Begin VB.Form frmQuotations 
    ClientHeight    =   8325
-   ClientLeft      =   4230
-   ClientTop       =   1665
+   ClientLeft      =   3405
+   ClientTop       =   1755
    ClientWidth     =   9600
    LinkTopic       =   "Form1"
    ScaleHeight     =   8325

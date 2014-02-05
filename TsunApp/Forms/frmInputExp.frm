@@ -3,8 +3,8 @@ Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Begin VB.Form frmInputExp 
    Caption         =   "Input Expenses"
    ClientHeight    =   7950
-   ClientLeft      =   2460
-   ClientTop       =   2040
+   ClientLeft      =   1380
+   ClientTop       =   1245
    ClientWidth     =   15765
    LinkTopic       =   "Form1"
    ScaleHeight     =   7950
@@ -467,7 +467,16 @@ Begin VB.Form frmInputExp
       _ExtentX        =   4895
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   7995393
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Segoe UI"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Format          =   50266113
       CurrentDate     =   41673
    End
    Begin VB.TextBox txtExpNote1 
@@ -530,7 +539,16 @@ Begin VB.Form frmInputExp
       _ExtentX        =   4895
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   7995393
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Segoe UI"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Format          =   50266113
       CurrentDate     =   41673
    End
    Begin MSComCtl2.DTPicker dteExpDate3 
@@ -542,7 +560,16 @@ Begin VB.Form frmInputExp
       _ExtentX        =   4895
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   7995393
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Segoe UI"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Format          =   50266113
       CurrentDate     =   41673
    End
    Begin MSComCtl2.DTPicker dteExpDate4 
@@ -554,7 +581,16 @@ Begin VB.Form frmInputExp
       _ExtentX        =   4895
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   7995393
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Segoe UI"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Format          =   50266113
       CurrentDate     =   41673
    End
    Begin MSComCtl2.DTPicker dteExpDate5 
@@ -566,7 +602,16 @@ Begin VB.Form frmInputExp
       _ExtentX        =   4895
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   7995393
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Segoe UI"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Format          =   50266113
       CurrentDate     =   41673
    End
    Begin MSComCtl2.DTPicker dteExpDate6 
@@ -578,7 +623,16 @@ Begin VB.Form frmInputExp
       _ExtentX        =   4895
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   7995393
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Segoe UI"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Format          =   50266113
       CurrentDate     =   41673
    End
    Begin MSComCtl2.DTPicker dteExpDate7 
@@ -590,7 +644,16 @@ Begin VB.Form frmInputExp
       _ExtentX        =   4895
       _ExtentY        =   661
       _Version        =   393216
-      Format          =   7995393
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "Segoe UI"
+         Size            =   9.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Format          =   50266113
       CurrentDate     =   41673
    End
    Begin VB.Label lblExpNotes 

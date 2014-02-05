@@ -2,8 +2,8 @@ VERSION 5.00
 Begin VB.Form frmInputSales 
    Caption         =   "Input Sales"
    ClientHeight    =   8055
-   ClientLeft      =   6255
-   ClientTop       =   1665
+   ClientLeft      =   3645
+   ClientTop       =   1365
    ClientWidth     =   6585
    LinkTopic       =   "Form1"
    ScaleHeight     =   8055
@@ -152,6 +152,7 @@ Begin VB.Form frmInputSales
       Left            =   240
       List            =   "frmInputSales.frx":0002
       TabIndex        =   7
+      Text            =   "Choose type"
       Top             =   5280
       Width           =   2775
    End
@@ -170,6 +171,7 @@ Begin VB.Form frmInputSales
       Left            =   240
       List            =   "frmInputSales.frx":0006
       TabIndex        =   6
+      Text            =   "Choose type"
       Top             =   4560
       Width           =   2775
    End
@@ -188,6 +190,7 @@ Begin VB.Form frmInputSales
       Left            =   240
       List            =   "frmInputSales.frx":000A
       TabIndex        =   5
+      Text            =   "Choose type"
       Top             =   3840
       Width           =   2775
    End
@@ -206,6 +209,7 @@ Begin VB.Form frmInputSales
       Left            =   240
       List            =   "frmInputSales.frx":000E
       TabIndex        =   4
+      Text            =   "Choose type"
       Top             =   3120
       Width           =   2775
    End
@@ -224,6 +228,7 @@ Begin VB.Form frmInputSales
       Left            =   240
       List            =   "frmInputSales.frx":0012
       TabIndex        =   3
+      Text            =   "Choose type"
       Top             =   2400
       Width           =   2775
    End
@@ -242,6 +247,7 @@ Begin VB.Form frmInputSales
       Left            =   240
       List            =   "frmInputSales.frx":0016
       TabIndex        =   2
+      Text            =   "Choose type"
       Top             =   1680
       Width           =   2775
    End
@@ -260,6 +266,7 @@ Begin VB.Form frmInputSales
       Left            =   240
       List            =   "frmInputSales.frx":001A
       TabIndex        =   0
+      Text            =   "Choose type"
       Top             =   960
       Width           =   2775
    End
