@@ -52,7 +52,7 @@ End Function
 
 Public Function AddNew(Post As String)
     query = "INSERT INTO tbl_posts(ID, post_author, post_date, post_date_gmt, post_content, post_title, post_excerpt, post_status, comment_status, ping_status, post_password, post_name, to_ping, pinged, post_modified, post_modified_gmt, post_content_filtered, post_parent, guid, menu_order, post_type, post_mime_type, comment_count) " & _
-            "VALUES ('', '1', '', '', '', '" & Post & "', '', 'published', 'closed', 'closed', '', '" & LCase(Post) & "', '', '', '', '', '', '0', 'http://localhost/tsuna/?post_type=wpa_expense_type', '', 'wpa_expense_type', '', '')"
+            "VALUES ('', '1', '', '', '', '" & Post & "', '', 'publish', 'closed', 'closed', '', '" & LCase(Post) & "', '', '', '', '', '', '0', 'http://localhost/tsuna/?post_type=wpa_expense_type', '', 'wpa_expense_type', '', '')"
             
     Connect.Execute query
 End Function

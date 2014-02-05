@@ -2,7 +2,7 @@ VERSION 5.00
 Begin VB.Form frmUserNew 
    Caption         =   "Add New"
    ClientHeight    =   8040
-   ClientLeft      =   8445
+   ClientLeft      =   6810
    ClientTop       =   1575
    ClientWidth     =   6585
    BeginProperty Font 

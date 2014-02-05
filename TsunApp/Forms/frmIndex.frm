@@ -3,12 +3,12 @@ Begin VB.Form frmIndex
    BackColor       =   &H80000005&
    Caption         =   "Index"
    ClientHeight    =   8685
-   ClientLeft      =   3015
-   ClientTop       =   1275
+   ClientLeft      =   3225
+   ClientTop       =   1710
    ClientWidth     =   9855
    LinkTopic       =   "Form1"
-   ScaleHeight     =   10770
-   ScaleWidth      =   19200
+   ScaleHeight     =   8685
+   ScaleWidth      =   9855
    WindowState     =   2  'Maximized
    Begin VB.PictureBox imgLogo 
       BorderStyle     =   0  'None
@@ -45,12 +45,45 @@ Begin VB.Form frmIndex
       Begin VB.Menu mnuExpType 
          Caption         =   "Expense Types"
       End
-      Begin VB.Menu mnuSales 
+      Begin VB.Menu mnuSalesLine 
          Caption         =   "Sales Lines"
+      End
+   End
+   Begin VB.Menu mnuQuotation 
+      Caption         =   "Quotations"
+      Begin VB.Menu mnuViewQuotations 
+         Caption         =   "Display All Quotations"
+      End
+      Begin VB.Menu mnuSalesQuote 
+         Caption         =   "Sales Quotation"
+      End
+      Begin VB.Menu mnuSvcQuotePart 
+         Caption         =   "Service Quotation (Parts)"
+      End
+      Begin VB.Menu mnuSvcQuotePMS 
+         Caption         =   "Service Quotation (Maintenance)"
+      End
+      Begin VB.Menu mnuSalesReport 
+         Caption         =   "Sales Report"
+      End
+      Begin VB.Menu mnuSvcReport 
+         Caption         =   "Service Report"
+      End
+   End
+   Begin VB.Menu mnuPersonnel 
+      Caption         =   "Personnel"
+      Begin VB.Menu mnuDTR 
+         Caption         =   "Daily Time Record"
+      End
+      Begin VB.Menu mnuPayroll 
+         Caption         =   "Payroll"
       End
    End
    Begin VB.Menu mnuLogistics 
       Caption         =   "Logistics"
+      Begin VB.Menu mnuPurchaseReq 
+         Caption         =   "Purchase Request"
+      End
    End
    Begin VB.Menu mnuUsers 
       Caption         =   "Users"
@@ -86,12 +119,12 @@ Private Sub mnuLedger_Click()
     frmLedger.Show vbModal, Me
 End Sub
 
-Private Sub mnuPersonnel_Click()
-
+Private Sub mnuSalesLine_Click()
+    frmSalesLine.Show
 End Sub
 
-Private Sub mnuSales_Click()
-    frmSalesLine.Show
+Private Sub mnuSalesQuote_Click()
+    frmSalesQuote.Show
 End Sub
 
 Private Sub mnuSuppliers_Click()
@@ -108,4 +141,8 @@ End Sub
 
 Private Sub mnuUserProfile_Click()
     frmProfile.Show
+End Sub
+
+Private Sub mnuViewQuotations_Click()
+    frmQuotations.Show
 End Sub

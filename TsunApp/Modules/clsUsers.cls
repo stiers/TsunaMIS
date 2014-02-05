@@ -49,3 +49,23 @@ Public Function Display(Grid As MSFlexGrid)
         .ColWidth(4) = 1900
     End With
 End Function
+
+Public Function Dropdown(Combo As ComboBox)
+    If Records.State = 1 Then Records.Close
+    
+    query = "SELECT display_name FROM tbl_users"
+    
+    Records.Open query, Connect
+    
+    Combo.Clear
+    
+    If Records.RecordCount > 0 Then
+        Records.MoveFirst
+        Do Until Records.EOF Or Records.BOF
+            With Combo
+                .AddItem Records!display_name
+            End With
+        Records.MoveNext
+        Loop
+    End If
+End Function

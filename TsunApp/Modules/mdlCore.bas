@@ -7,6 +7,8 @@ Public ExpenseType As clsExpType
 Public Suppliers As clsSuppliers
 Public SalesLine As clsSalesLine
 Public Ledger As clsLedger
+Public Quote As clsQuotation
+
 Public MD5 As clsMD5
 
 Public query As String
@@ -20,6 +22,8 @@ Sub Main()
     Set Suppliers = New clsSuppliers
     Set SalesLine = New clsSalesLine
     Set Ledger = New clsLedger
+    Set Quote = New clsQuotation
+    
     Set MD5 = New clsMD5
     
     With Records
