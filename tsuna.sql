@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.9
+-- version 3.5.2.2
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 08, 2014 at 06:00 PM
--- Server version: 5.6.14
--- PHP Version: 5.5.6
+-- Generation Time: Feb 12, 2014 at 09:49 AM
+-- Server version: 5.5.27
+-- PHP Version: 5.4.7
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -197,46 +197,6 @@ INSERT INTO `tbl_bp_groups` (`id`, `creator_id`, `name`, `slug`, `description`, 
 (7, 1, 'Sales', 'sales', 'Nunc id gravida tellus. Donec laoreet orci bibendum nulla hendrerit, in volutpat tellus vulputate. Duis blandit et metus rhoncus lacinia.', 'hidden', 0, '2014-02-08 11:45:38'),
 (8, 1, 'Certified Public Accountants', 'certified-public-accountants', 'Morbi luctus odio dui, quis pharetra diam viverra at. Integer ullamcorper imperdiet eleifend. Donec vel eros nec arcu lobortis rhoncus. Nullam eget ipsum ut augue pretium hendrerit quis a lectus.', 'public', 0, '2014-02-08 11:46:30'),
 (9, 1, 'Engineers', 'engineers', 'Pellentesque tellus dui, adipiscing eu mollis ut, ultricies eu felis. Duis a arcu et ante cursus cursus nec ac enim. Nullam vitae pellentesque erat, ut ullamcorper orci.', 'public', 0, '2014-02-08 11:47:23');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_bp_groups_groupmeta`
---
-
-CREATE TABLE IF NOT EXISTS `tbl_bp_groups_groupmeta` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `group_id` bigint(20) NOT NULL,
-  `meta_key` varchar(255) DEFAULT NULL,
-  `meta_value` longtext,
-  PRIMARY KEY (`id`),
-  KEY `group_id` (`group_id`),
-  KEY `meta_key` (`meta_key`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=28 ;
-
---
--- Dumping data for table `tbl_bp_groups_groupmeta`
---
-
-INSERT INTO `tbl_bp_groups_groupmeta` (`id`, `group_id`, `meta_key`, `meta_value`) VALUES
-(10, 4, 'total_member_count', '1'),
-(11, 4, 'last_activity', '2014-02-08 11:42:52'),
-(12, 4, 'invite_status', 'admins'),
-(13, 5, 'total_member_count', '1'),
-(14, 5, 'last_activity', '2014-02-08 11:43:55'),
-(15, 5, 'invite_status', 'admins'),
-(16, 6, 'total_member_count', '1'),
-(17, 6, 'last_activity', '2014-02-08 11:45:01'),
-(18, 6, 'invite_status', 'admins'),
-(19, 7, 'total_member_count', '1'),
-(20, 7, 'last_activity', '2014-02-08 11:45:47'),
-(21, 7, 'invite_status', 'admins'),
-(22, 8, 'total_member_count', '1'),
-(23, 8, 'last_activity', '2014-02-08 11:46:36'),
-(24, 8, 'invite_status', 'members'),
-(25, 9, 'total_member_count', '1'),
-(26, 9, 'last_activity', '2014-02-08 11:47:29'),
-(27, 9, 'invite_status', 'members');
 
 -- --------------------------------------------------------
 
@@ -719,6 +679,35 @@ INSERT INTO `tbl_comments` (`comment_ID`, `comment_post_ID`, `comment_author`, `
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_finance`
+--
+
+CREATE TABLE IF NOT EXISTS `tbl_finance` (
+  `finance_id` int(11) NOT NULL AUTO_INCREMENT,
+  `line` varchar(50) NOT NULL,
+  `description` text NOT NULL,
+  `date` date NOT NULL,
+  `amount` double NOT NULL,
+  `status` int(11) NOT NULL,
+  `invoice` text NOT NULL,
+  `currency` varchar(3) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  PRIMARY KEY (`finance_id`)
+) ENGINE=MyISAM  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- Dumping data for table `tbl_finance`
+--
+
+INSERT INTO `tbl_finance` (`finance_id`, `line`, `description`, `date`, `amount`, `status`, `invoice`, `currency`, `user_id`) VALUES
+(1, 'Test', 'test', '2014-02-10', 120000, 1, '0032', '', 1),
+(2, 'Test', 'test', '2014-02-10', 5000, 2, '0032', '', 1),
+(3, 'Debit sample', 'Sample', '2014-02-12', 10000, 1, '0033', '', 1),
+(4, 'Employee Loan', 'Loan of Ephramar', '2012-02-20', 12000, 2, '0034', '', 1);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_links`
 --
 
@@ -1072,42 +1061,6 @@ INSERT INTO `tbl_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `des
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_tp_accounting`
---
-
-CREATE TABLE IF NOT EXISTS `tbl_tp_accounting` (
-  `ID` bigint(20) NOT NULL AUTO_INCREMENT,
-  `date` varchar(200) NOT NULL,
-  `type` varchar(200) NOT NULL,
-  `amount` decimal(10,2) NOT NULL,
-  PRIMARY KEY (`ID`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 AUTO_INCREMENT=1 ;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_tp_accounting_meta`
---
-
-CREATE TABLE IF NOT EXISTS `tbl_tp_accounting_meta` (
-  `meta_id` bigint(20) NOT NULL,
-  `meta_type` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_tp_accounting_meta`
---
-
-INSERT INTO `tbl_tp_accounting_meta` (`meta_id`, `meta_type`) VALUES
-(0, 'Donation'),
-(0, 'Fees'),
-(0, 'Materials'),
-(0, 'Rent'),
-(0, 'Utilities');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tbl_tp_clients`
 --
 
@@ -1139,7 +1092,7 @@ CREATE TABLE IF NOT EXISTS `tbl_tp_logistics` (
   `purchase_date` varchar(100) NOT NULL,
   `equipment` varchar(255) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `tbl_tp_logistics`
@@ -1147,7 +1100,8 @@ CREATE TABLE IF NOT EXISTS `tbl_tp_logistics` (
 
 INSERT INTO `tbl_tp_logistics` (`ID`, `purchase_id`, `quotation_id`, `purchase_date`, `equipment`) VALUES
 (1, 1, 3, '2/8/2014', 'Type S General Purpose'),
-(2, 2, 2, '2/5/2014', 'Type S General Purpose');
+(2, 2, 2, '2/5/2014', 'Type S General Purpose'),
+(3, 6, 5, '05.02.2014', 'Type K General Purpose');
 
 -- --------------------------------------------------------
 
@@ -1185,12 +1139,12 @@ CREATE TABLE IF NOT EXISTS `tbl_tp_products` (
 INSERT INTO `tbl_tp_products` (`ID`, `equipment_name`, `product_line`, `freight_cost`) VALUES
 (1, 'Eutech', '', NULL),
 (2, 'Sakura', '', NULL),
-(3, 'ATC Probe', 'Eutech', '10000.00'),
-(4, 'pH 4 Buffer', 'Eutech', '10000.00'),
-(5, 'pH 7 Buffer', 'Eutech', '10000.00'),
-(6, 'Type K General Purpose', 'Sakura', '10000.00'),
-(7, 'Type S General Purpose', 'Sakura', '2000.00'),
-(8, 'Type S General Purpose', 'Eutech', '2000.00');
+(3, 'ATC Probe', 'Eutech', 10000.00),
+(4, 'pH 4 Buffer', 'Eutech', 10000.00),
+(5, 'pH 7 Buffer', 'Eutech', 10000.00),
+(6, 'Type K General Purpose', 'Sakura', 10000.00),
+(7, 'Type S General Purpose', 'Sakura', 2000.00),
+(8, 'Type S General Purpose', 'Eutech', 2000.00);
 
 -- --------------------------------------------------------
 
@@ -1217,16 +1171,17 @@ CREATE TABLE IF NOT EXISTS `tbl_tp_quotations` (
   `q_other` decimal(10,2) DEFAULT NULL,
   `total_amount` decimal(10,2) DEFAULT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `tbl_tp_quotations`
 --
 
 INSERT INTO `tbl_tp_quotations` (`ID`, `q_ref_num`, `q_date`, `q_type`, `q_equipment`, `q_client`, `q_price`, `q_freight`, `q_tax`, `q_profit`, `q_opex`, `q_rep`, `q_training`, `q_misc`, `q_delivery`, `q_other`, `total_amount`) VALUES
-(3, '1', '2/5/2014', 'sales', 'ATC Probe', 'University of Iloilo', '1000.00', '1000.00', '1000.00', '1000.00', '1000.00', '1000.00', '1000.00', '1000.00', '1000.00', '1000.00', '0.00'),
-(5, '2', '2/5/2014', 'sales', 'Type S General Purpose', 'SEAFDEC Aquaculture Department', '20000.00', '20000.00', '3000.00', '6200.00', '2800.00', '400.00', '10000.00', '10000.00', '20000.00', '0.00', '92400.00'),
-(6, '3', '2/8/2014', 'maintenance', 'Type S General Purpose', 'SEAFDEC Aquaculture Department', '20000.00', '2000.00', '3000.00', '6200.00', '2800.00', '400.00', '10000.00', '20000.00', '20000.00', '0.00', '84400.00');
+(3, '1', '2/5/2014', 'sales', 'ATC Probe', 'University of Iloilo', 1000.00, 1000.00, 1000.00, 1000.00, 1000.00, 1000.00, 1000.00, 1000.00, 1000.00, 1000.00, 0.00),
+(5, '2', '2/5/2014', 'sales', 'Type S General Purpose', 'SEAFDEC Aquaculture Department', 20000.00, 20000.00, 3000.00, 6200.00, 2800.00, 400.00, 10000.00, 10000.00, 20000.00, 0.00, 92400.00),
+(6, '3', '2/8/2014', 'maintenance', 'Type S General Purpose', 'SEAFDEC Aquaculture Department', 20000.00, 2000.00, 3000.00, 6200.00, 2800.00, 400.00, 10000.00, 20000.00, 20000.00, 0.00, 84400.00),
+(7, '5', '05.02.2014', 'sales', 'Type K General Purpose', 'University of Iloilo', 20000.00, 10000.00, 3000.00, 6200.00, 2800.00, 400.00, 10000.00, 20000.00, 20000.00, 0.00, 92400.00);
 
 -- --------------------------------------------------------
 
@@ -1239,7 +1194,7 @@ CREATE TABLE IF NOT EXISTS `tbl_tp_quotation_meta` (
   `quotation_number` varchar(255) NOT NULL,
   `is_purchased` varchar(5) NOT NULL,
   PRIMARY KEY (`meta_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `tbl_tp_quotation_meta`
@@ -1247,7 +1202,10 @@ CREATE TABLE IF NOT EXISTS `tbl_tp_quotation_meta` (
 
 INSERT INTO `tbl_tp_quotation_meta` (`meta_id`, `quotation_number`, `is_purchased`) VALUES
 (1, '1', 'True'),
-(2, '2', 'True');
+(2, '2', 'True'),
+(3, '5', 'True'),
+(4, '3', 'True'),
+(5, '5', 'True');
 
 -- --------------------------------------------------------
 
