@@ -3,8 +3,8 @@ Begin VB.Form frmIndex
    BackColor       =   &H80000005&
    Caption         =   "Index"
    ClientHeight    =   8085
-   ClientLeft      =   25335
-   ClientTop       =   2640
+   ClientLeft      =   1590
+   ClientTop       =   1290
    ClientWidth     =   15180
    LinkTopic       =   "Form1"
    ScaleHeight     =   8085
@@ -121,23 +121,23 @@ Private Sub mnuAddSvcQuoteParts_Click()
 End Sub
 
 Private Sub mnuClients_Click()
-    frmSalesClient.Show
+    frmSalesClient.Show vbModal, Me
 End Sub
 
 Private Sub mnuDAR_Click()
-    frmEngineerDAR.Show
+    frmEngineerDAR.Show vbModal, Me
 End Sub
 
 Private Sub mnuIncome_Click()
-    frmAccIncome.Show
+    frmAccIncome.Show vbModal, Me
 End Sub
 
 Private Sub mnuLedger_Click()
-    frmAccLedger.Show
+    frmAccLedger.Show vbModal, Me
 End Sub
 
 Private Sub mnuPayroll_Click()
-    frmAccPayroll.Show
+    frmAccPayroll.Show vbModal, Me
 End Sub
 
 Private Sub mnuProductLineAdd_Click()

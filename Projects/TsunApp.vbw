@@ -1,5 +1,5 @@
 Core = 54, 460, 1189, 1037, C
-frmIndex = 148, 127, 603, 704, C, 0, 0, 0, 0, C
+frmIndex = 148, 127, 603, 704, , 25, 25, 899, 474, C
 ClassMD5 = 0, 0, 0, 0, C
 frmAccLedger = 0, 0, 0, 0, C, 0, 0, 0, 0, C
 frmAccIncome = 0, 0, 0, 0, C, 0, 0, 0, 0, C

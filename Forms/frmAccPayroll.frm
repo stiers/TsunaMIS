@@ -4,8 +4,8 @@ Begin VB.Form frmAccPayroll
    BackColor       =   &H80000005&
    Caption         =   "Payroll"
    ClientHeight    =   9390
-   ClientLeft      =   22320
-   ClientTop       =   2265
+   ClientLeft      =   1065
+   ClientTop       =   720
    ClientWidth     =   15030
    LinkTopic       =   "Form1"
    ScaleHeight     =   9390

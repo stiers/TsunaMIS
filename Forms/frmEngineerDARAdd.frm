@@ -2,8 +2,8 @@ VERSION 5.00
 Begin VB.Form frmEngineerDARAdd 
    Caption         =   "Add Record"
    ClientHeight    =   8085
-   ClientLeft      =   23685
-   ClientTop       =   2475
+   ClientLeft      =   5760
+   ClientTop       =   1965
    ClientWidth     =   6585
    LinkTopic       =   "Form1"
    ScaleHeight     =   8085

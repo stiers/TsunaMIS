@@ -4,8 +4,8 @@ Begin VB.Form frmEngineerDAR
    BackColor       =   &H80000005&
    Caption         =   "Daily Activity Record"
    ClientHeight    =   9405
-   ClientLeft      =   23700
-   ClientTop       =   2475
+   ClientLeft      =   1725
+   ClientTop       =   660
    ClientWidth     =   15075
    LinkTopic       =   "Form1"
    ScaleHeight     =   9405

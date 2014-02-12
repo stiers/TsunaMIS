@@ -3,8 +3,8 @@ Begin VB.Form frmSalesClient
    BackColor       =   &H80000005&
    Caption         =   "Clients"
    ClientHeight    =   8085
-   ClientLeft      =   29385
-   ClientTop       =   2640
+   ClientLeft      =   6105
+   ClientTop       =   1890
    ClientWidth     =   6585
    LinkTopic       =   "Form1"
    ScaleHeight     =   8085

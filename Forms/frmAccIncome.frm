@@ -4,8 +4,8 @@ Begin VB.Form frmAccIncome
    BackColor       =   &H80000005&
    Caption         =   "Income Statement"
    ClientHeight    =   9405
-   ClientLeft      =   23880
-   ClientTop       =   1830
+   ClientLeft      =   930
+   ClientTop       =   1155
    ClientWidth     =   15060
    LinkTopic       =   "Form1"
    ScaleHeight     =   9405

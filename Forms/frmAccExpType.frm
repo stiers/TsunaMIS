@@ -2,8 +2,8 @@ VERSION 5.00
 Begin VB.Form frmAccExpType 
    Caption         =   "Add New Expense"
    ClientHeight    =   8085
-   ClientLeft      =   27495
-   ClientTop       =   3315
+   ClientLeft      =   4650
+   ClientTop       =   1470
    ClientWidth     =   6585
    LinkTopic       =   "Form1"
    ScaleHeight     =   8085

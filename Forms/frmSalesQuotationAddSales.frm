@@ -3,8 +3,8 @@ Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
 Begin VB.Form frmSalesQuotationAddSales 
    Caption         =   "Add New Sales Quotation"
    ClientHeight    =   9375
-   ClientLeft      =   25680
-   ClientTop       =   2220
+   ClientLeft      =   3270
+   ClientTop       =   1020
    ClientWidth     =   10605
    LinkTopic       =   "Form1"
    ScaleHeight     =   9375
@@ -295,7 +295,7 @@ Begin VB.Form frmSalesQuotationAddSales
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Format          =   113836033
+      Format          =   135004161
       CurrentDate     =   41675
    End
    Begin VB.Label Label15 

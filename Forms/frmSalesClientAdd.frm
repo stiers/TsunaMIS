@@ -2,8 +2,8 @@ VERSION 5.00
 Begin VB.Form frmSalesClientAdd 
    Caption         =   "Add New Client"
    ClientHeight    =   8085
-   ClientLeft      =   29025
-   ClientTop       =   3585
+   ClientLeft      =   5445
+   ClientTop       =   2265
    ClientWidth     =   6585
    LinkTopic       =   "Form1"
    ScaleHeight     =   8085
