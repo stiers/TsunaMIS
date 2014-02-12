@@ -3,7 +3,7 @@ Begin VB.Form frmIndex
    BackColor       =   &H80000005&
    Caption         =   "Index"
    ClientHeight    =   8085
-   ClientLeft      =   1590
+   ClientLeft      =   -510
    ClientTop       =   1290
    ClientWidth     =   15180
    LinkTopic       =   "Form1"
@@ -13,22 +13,22 @@ Begin VB.Form frmIndex
    Begin VB.Menu mnuAccounting 
       Caption         =   "Accounting"
       NegotiatePosition=   1  'Left
-      Begin VB.Menu mnuLedger 
-         Caption         =   "Ledger"
-      End
       Begin VB.Menu mnuIncome 
          Caption         =   "Income"
       End
       Begin VB.Menu mnuPayroll 
          Caption         =   "Payroll"
       End
+      Begin VB.Menu mnuLoan 
+         Caption         =   "Loan"
+      End
       Begin VB.Menu mnuSep1 
          Caption         =   "-"
       End
       Begin VB.Menu mnuSetAccounting 
          Caption         =   "Settings"
-         Begin VB.Menu mnuAddExp 
-            Caption         =   "Add New Expense"
+         Begin VB.Menu mnuMis 
+            Caption         =   "Miscellaneous"
          End
       End
    End
@@ -129,11 +129,11 @@ Private Sub mnuDAR_Click()
 End Sub
 
 Private Sub mnuIncome_Click()
-    frmAccIncome.Show vbModal, Me
+    frmAccLedger.Show vbModal, Me
 End Sub
 
-Private Sub mnuLedger_Click()
-    frmAccLedger.Show vbModal, Me
+Private Sub mnuLoan_Click()
+    frmLoan.Show vbModal, Me
 End Sub
 
 Private Sub mnuPayroll_Click()

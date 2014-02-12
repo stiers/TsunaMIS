@@ -1,62 +1,79 @@
 VERSION 5.00
 Begin VB.Form frmEngineerDARAdd 
    Caption         =   "Add Record"
-   ClientHeight    =   8085
-   ClientLeft      =   5760
-   ClientTop       =   1965
-   ClientWidth     =   6585
+   ClientHeight    =   7755
+   ClientLeft      =   3105
+   ClientTop       =   540
+   ClientWidth     =   7560
    LinkTopic       =   "Form1"
-   ScaleHeight     =   8085
-   ScaleWidth      =   6585
-   Begin VB.ComboBox cboTSFREq 
+   ScaleHeight     =   7755
+   ScaleWidth      =   7560
+   Begin VB.CommandButton btnCancel 
+      Caption         =   "Cancel"
       BeginProperty Font 
          Name            =   "Segoe UI"
-         Size            =   9.75
+         Size            =   9
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   375
-      Left            =   3360
+      Height          =   615
+      Left            =   5280
+      TabIndex        =   17
+      Top             =   6840
+      Width           =   1815
+   End
+   Begin VB.ComboBox cboTSFREq 
+      BeginProperty Font 
+         Name            =   "Segoe UI"
+         Size            =   12
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   435
+      Left            =   2880
       TabIndex        =   16
-      Top             =   2280
-      Width           =   2775
+      Top             =   2520
+      Width           =   4335
    End
    Begin VB.ComboBox cboTSFRJob 
       BeginProperty Font 
          Name            =   "Segoe UI"
-         Size            =   9.75
+         Size            =   12
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   375
+      Height          =   435
       ItemData        =   "frmEngineerDARAdd.frx":0000
-      Left            =   3360
+      Left            =   2880
       List            =   "frmEngineerDARAdd.frx":000D
       TabIndex        =   14
-      Top             =   2760
-      Width           =   2775
+      Top             =   3120
+      Width           =   4335
    End
    Begin VB.ComboBox cboTSFRAcc 
       BeginProperty Font 
          Name            =   "Segoe UI"
-         Size            =   9.75
+         Size            =   12
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   375
-      Left            =   3360
+      Height          =   435
+      Left            =   2880
       TabIndex        =   13
-      Top             =   1800
-      Width           =   2775
+      Top             =   1920
+      Width           =   4335
    End
    Begin VB.Frame Frame1 
       Caption         =   "TSFR Number"
@@ -70,9 +87,9 @@ Begin VB.Form frmEngineerDARAdd
          Strikethrough   =   0   'False
       EndProperty
       Height          =   735
-      Left            =   3360
+      Left            =   4440
       TabIndex        =   11
-      Top             =   240
+      Top             =   960
       Width           =   2775
       Begin VB.TextBox txtTSFRNum 
          Height          =   405
@@ -93,11 +110,11 @@ Begin VB.Form frmEngineerDARAdd
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   375
-      Left            =   4560
+      Height          =   615
+      Left            =   3000
       TabIndex        =   10
-      Top             =   6480
-      Width           =   1575
+      Top             =   6840
+      Width           =   1815
    End
    Begin VB.TextBox txtTSFRContact 
       BeginProperty Font 
@@ -109,11 +126,11 @@ Begin VB.Form frmEngineerDARAdd
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   375
-      Left            =   3360
+      Height          =   495
+      Left            =   2880
       TabIndex        =   3
-      Top             =   5640
-      Width           =   2775
+      Top             =   6120
+      Width           =   4335
    End
    Begin VB.TextBox txtTSFRPosition 
       BeginProperty Font 
@@ -125,11 +142,11 @@ Begin VB.Form frmEngineerDARAdd
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   375
-      Left            =   3360
+      Height          =   495
+      Left            =   2880
       TabIndex        =   2
-      Top             =   5160
-      Width           =   2775
+      Top             =   5400
+      Width           =   4335
    End
    Begin VB.TextBox txtTSFRName 
       BeginProperty Font 
@@ -141,38 +158,39 @@ Begin VB.Form frmEngineerDARAdd
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   375
-      Left            =   3360
+      Height          =   495
+      Left            =   2880
       TabIndex        =   1
       Top             =   4680
-      Width           =   2775
+      Width           =   4335
    End
    Begin VB.Label Label3 
       AutoSize        =   -1  'True
-      Caption         =   "Equipment"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Equipment:"
       BeginProperty Font 
          Name            =   "Segoe UI"
-         Size            =   9.75
+         Size            =   12
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   255
-      Left            =   240
+      Height          =   315
+      Left            =   480
       TabIndex        =   15
-      Top             =   2280
-      Width           =   930
+      Top             =   2640
+      Width           =   1170
    End
    Begin VB.Label Label2 
       AutoSize        =   -1  'True
       Caption         =   "Person who signed TSFR"
       BeginProperty Font 
-         Name            =   "Segoe UI Semibold"
+         Name            =   "Arial"
          Size            =   14.25
          Charset         =   0
-         Weight          =   600
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -180,116 +198,122 @@ Begin VB.Form frmEngineerDARAdd
       Height          =   375
       Left            =   240
       TabIndex        =   9
-      Top             =   3720
+      Top             =   4080
       Width           =   3105
    End
    Begin VB.Label Label10 
       AutoSize        =   -1  'True
-      Caption         =   "Contact Number"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Contact Number:"
       BeginProperty Font 
          Name            =   "Segoe UI"
-         Size            =   9.75
+         Size            =   12
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   255
-      Left            =   240
+      Height          =   315
+      Left            =   480
       TabIndex        =   8
-      Top             =   5640
-      Width           =   1440
+      Top             =   6240
+      Width           =   1770
    End
    Begin VB.Label Label9 
       AutoSize        =   -1  'True
-      Caption         =   "Position"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Position:"
       BeginProperty Font 
          Name            =   "Segoe UI"
-         Size            =   9.75
+         Size            =   12
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   255
-      Left            =   240
+      Height          =   315
+      Left            =   480
       TabIndex        =   7
-      Top             =   5160
-      Width           =   690
+      Top             =   5520
+      Width           =   885
    End
    Begin VB.Label Label6 
       AutoSize        =   -1  'True
-      Caption         =   "Type of Job Order"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Type of Job Order:"
       BeginProperty Font 
          Name            =   "Segoe UI"
-         Size            =   9.75
+         Size            =   12
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   255
-      Left            =   240
+      Height          =   315
+      Left            =   480
       TabIndex        =   6
-      Top             =   2760
-      Width           =   1620
+      Top             =   3120
+      Width           =   1905
    End
    Begin VB.Label Label5 
       AutoSize        =   -1  'True
-      Caption         =   "Account"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Account:"
       BeginProperty Font 
          Name            =   "Segoe UI"
-         Size            =   9.75
+         Size            =   12
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   255
-      Left            =   240
+      Height          =   315
+      Left            =   480
       TabIndex        =   5
-      Top             =   1800
-      Width           =   690
+      Top             =   2040
+      Width           =   885
    End
    Begin VB.Label Label7 
       AutoSize        =   -1  'True
-      Caption         =   "Name"
+      BackStyle       =   0  'Transparent
+      Caption         =   "Name:"
       BeginProperty Font 
          Name            =   "Segoe UI"
-         Size            =   9.75
+         Size            =   12
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   255
-      Left            =   240
+      Height          =   315
+      Left            =   480
       TabIndex        =   4
-      Top             =   4680
-      Width           =   525
+      Top             =   4800
+      Width           =   675
    End
    Begin VB.Label Label1 
       AutoSize        =   -1  'True
+      BackStyle       =   0  'Transparent
       Caption         =   "Add Record"
       BeginProperty Font 
-         Name            =   "Segoe UI Semibold"
+         Name            =   "Arial"
          Size            =   14.25
          Charset         =   0
-         Weight          =   600
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
       Height          =   375
-      Left            =   240
+      Left            =   600
       TabIndex        =   0
-      Top             =   240
-      Width           =   1500
+      Top             =   360
+      Width           =   1860
    End
 End
 Attribute VB_Name = "frmEngineerDARAdd"
@@ -309,3 +333,4 @@ Private Sub Form_Load()
     Call Client.DisplayDropdown(cboTSFRAcc)
     Call Product.DisplayEquipment(cboTSFREq)
 End Sub
+

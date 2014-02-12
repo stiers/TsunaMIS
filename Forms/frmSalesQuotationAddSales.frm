@@ -1,10 +1,10 @@
 VERSION 5.00
-Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
+Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "Mscomct2.ocx"
 Begin VB.Form frmSalesQuotationAddSales 
    Caption         =   "Add New Sales Quotation"
    ClientHeight    =   9375
-   ClientLeft      =   3270
-   ClientTop       =   1020
+   ClientLeft      =   1905
+   ClientTop       =   390
    ClientWidth     =   10605
    LinkTopic       =   "Form1"
    ScaleHeight     =   9375
@@ -256,10 +256,10 @@ Begin VB.Form frmSalesQuotationAddSales
    Begin VB.Frame Frame1 
       Caption         =   "Reference Number"
       BeginProperty Font 
-         Name            =   "Segoe UI Semibold"
+         Name            =   "MS Sans Serif"
          Size            =   9.75
          Charset         =   0
-         Weight          =   600
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -295,7 +295,7 @@ Begin VB.Form frmSalesQuotationAddSales
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Format          =   135004161
+      Format          =   16580609
       CurrentDate     =   41675
    End
    Begin VB.Label Label15 
@@ -338,10 +338,10 @@ Begin VB.Form frmSalesQuotationAddSales
       AutoSize        =   -1  'True
       Caption         =   "Add New Quotation"
       BeginProperty Font 
-         Name            =   "Segoe UI Semibold"
+         Name            =   "Arial"
          Size            =   14.25
          Charset         =   0
-         Weight          =   600
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -573,10 +573,10 @@ Begin VB.Form frmSalesQuotationAddSales
       AutoSize        =   -1  'True
       Caption         =   "0.00"
       BeginProperty Font 
-         Name            =   "Segoe UI Semibold"
+         Name            =   "Arial"
          Size            =   14.25
          Charset         =   0
-         Weight          =   600
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False

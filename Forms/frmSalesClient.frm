@@ -84,10 +84,10 @@ Begin VB.Form frmSalesClient
       BackColor       =   &H80000005&
       Caption         =   "Clients"
       BeginProperty Font 
-         Name            =   "Segoe UI Semibold"
+         Name            =   "Arial"
          Size            =   14.25
          Charset         =   0
-         Weight          =   600
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False

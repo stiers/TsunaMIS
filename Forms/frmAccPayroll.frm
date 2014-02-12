@@ -1,11 +1,11 @@
 VERSION 5.00
-Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "MSFLXGRD.OCX"
+Object = "{5E9E78A0-531B-11CF-91F6-C2863C385E30}#1.0#0"; "msflxgrd.ocx"
 Begin VB.Form frmAccPayroll 
    BackColor       =   &H80000005&
    Caption         =   "Payroll"
    ClientHeight    =   9390
-   ClientLeft      =   1065
-   ClientTop       =   720
+   ClientLeft      =   120
+   ClientTop       =   705
    ClientWidth     =   15030
    LinkTopic       =   "Form1"
    ScaleHeight     =   9390
@@ -53,10 +53,10 @@ Begin VB.Form frmAccPayroll
       BackColor       =   &H80000005&
       Caption         =   "Employee's Payroll"
       BeginProperty Font 
-         Name            =   "Segoe UI Semibold"
+         Name            =   "Arial"
          Size            =   14.25
          Charset         =   0
-         Weight          =   600
+         Weight          =   700
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
