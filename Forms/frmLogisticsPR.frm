@@ -4,8 +4,8 @@ Begin VB.Form frmLogisticsPR
    BackColor       =   &H80000005&
    Caption         =   "Purchase Request"
    ClientHeight    =   9375
-   ClientLeft      =   23865
-   ClientTop       =   2010
+   ClientLeft      =   3840
+   ClientTop       =   1155
    ClientWidth     =   10605
    LinkTopic       =   "Form1"
    ScaleHeight     =   9375

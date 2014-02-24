@@ -4,8 +4,8 @@ Begin VB.Form frmSalesQuotation
    BackColor       =   &H80000005&
    Caption         =   "Sales Quotation"
    ClientHeight    =   9375
-   ClientLeft      =   28680
-   ClientTop       =   2190
+   ClientLeft      =   4410
+   ClientTop       =   465
    ClientWidth     =   10590
    LinkTopic       =   "Form1"
    ScaleHeight     =   9375

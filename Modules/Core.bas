@@ -6,6 +6,7 @@ Public Records As ADODB.Recordset
 
 Public MD5 As ClassMD5
 
+Public Accounting As ClassAccounting
 Public Client As ClassClient
 Public User As ClassUser
 Public Product As ClassProduct
@@ -22,6 +23,7 @@ Sub Main()
     
     Set MD5 = New ClassMD5
     
+    Set Accounting = New ClassAccounting
     Set Client = New ClassClient
     Set User = New ClassUser
     Set Product = New ClassProduct

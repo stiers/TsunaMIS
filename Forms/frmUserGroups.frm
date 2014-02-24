@@ -4,8 +4,8 @@ Begin VB.Form frmUserGroups
    BackColor       =   &H80000005&
    Caption         =   "User Groups"
    ClientHeight    =   8085
-   ClientLeft      =   22065
-   ClientTop       =   2550
+   ClientLeft      =   5625
+   ClientTop       =   1530
    ClientWidth     =   6585
    LinkTopic       =   "Form1"
    ScaleHeight     =   8085

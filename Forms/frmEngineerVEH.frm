@@ -4,8 +4,8 @@ Begin VB.Form frmEngineerVEH
    BackColor       =   &H80000005&
    Caption         =   "Equipment History"
    ClientHeight    =   9375
-   ClientLeft      =   25245
-   ClientTop       =   3255
+   ClientLeft      =   360
+   ClientTop       =   1260
    ClientWidth     =   15120
    LinkTopic       =   "Form1"
    ScaleHeight     =   9375
